@@ -14,10 +14,11 @@ spec:
       labels:
         app: htmlapp
     spec:
+      # Caso seus nós precisem de credenciais para puxar a imagem, defina o imagePullSecrets
       imagePullSecrets:
-      - name: ecr-creds  # Certifique-se de ter criado esse secret
+      - name: ecr-creds
       containers:
       - name: htmlapp-container
-        image: 891376968724.dkr.ecr.us-east-1.amazonaws.com/app/htmlapp:latest
+        image: 891376968724.dkr.ecr.us-east-1.amazonaws.com/app/htmlapp:e514d8a37dc5002245e47e71f0c90fa234f70c0b
         ports:
         - containerPort: 80

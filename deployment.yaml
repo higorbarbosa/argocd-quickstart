@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-deployment
+  name: htmlapp-deployment
   labels:
-    app: hello
+    app: htmlapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: htmlapp
   template:
     metadata:
       labels:
-        app: hello
+        app: htmlapp
     spec:
       containers:
-      - name: hello-container
+      - name: htmlapp-container
+        # Use a imagem do ECR
         image: 891376968724.dkr.ecr.us-east-1.amazonaws.com/app/htmlapp:latest
         ports:
         - containerPort: 80

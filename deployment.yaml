@@ -19,6 +19,6 @@ spec:
       - name: ecr-creds
       containers:
       - name: htmlapp-container
-        image: 891376968724.dkr.ecr.us-east-1.amazonaws.com/app/htmlapp:e514d8a37dc5002245e47e71f0c90fa234f70c0b
+        image: 891376968724.dkr.ecr.us-east-1.amazonaws.com/app/htmlapp:latest
         ports:
         - containerPort: 80

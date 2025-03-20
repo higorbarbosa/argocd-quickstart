@@ -14,9 +14,10 @@ spec:
       labels:
         app: htmlapp
     spec:
+      imagePullSecrets:
+      - name: ecr-creds  # Certifique-se de ter criado esse secret
       containers:
       - name: htmlapp-container
-        # Use a imagem do ECR
         image: 891376968724.dkr.ecr.us-east-1.amazonaws.com/app/htmlapp:latest
         ports:
         - containerPort: 80

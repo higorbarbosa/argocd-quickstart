@@ -1,15 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: nginx
-  name: nginx-service
-  namespace: default
+  name: hello-service
 spec:
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
+  type: LoadBalancer
   selector:
-    app: nginx
-  type: NodePort
+    app: hello
+  ports:
+    - port: 80
+      targetPort: 5678
